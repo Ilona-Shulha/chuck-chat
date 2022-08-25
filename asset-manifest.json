@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/chuck-chat/static/css/main.9bd64cef.css",
+    "main.js": "/chuck-chat/static/js/main.b44b608b.js",
+    "static/media/AnyConv.com__Roboto-Regular.woff": "/chuck-chat/static/media/AnyConv.com__Roboto-Regular.457c92bb62734e3030ed.woff",
+    "static/media/AnyConv.com__Roboto-Light.woff": "/chuck-chat/static/media/AnyConv.com__Roboto-Light.d2d978b9394983c3338c.woff",
+    "static/media/search_icon.svg": "/chuck-chat/static/media/search_icon.c379a0d80258d2eed2a1.svg",
+    "index.html": "/chuck-chat/index.html",
+    "static/media/send.svg": "/chuck-chat/static/media/send.7d0c5d63d40fe6bc27a2.svg",
+    "static/media/online.svg": "/chuck-chat/static/media/online.ccecc17f348eda626870.svg",
+    "main.9bd64cef.css.map": "/chuck-chat/static/css/main.9bd64cef.css.map",
+    "main.b44b608b.js.map": "/chuck-chat/static/js/main.b44b608b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9bd64cef.css",
+    "static/js/main.b44b608b.js"
+  ]
+}
