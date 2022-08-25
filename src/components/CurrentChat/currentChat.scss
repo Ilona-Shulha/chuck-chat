@@ -1,0 +1,36 @@
+.current-chat {
+  flex-grow: 1;
+
+  &__recipient {
+    height: $recipient-header-hight;
+    box-sizing: border-box;
+    padding-left: 20px;
+    background-color: $gray;
+    border: $area-border;
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__recipient-photo {
+    margin-right: 20px;
+    @include circle(50px);
+  }
+
+  &__avatar-label {
+    @include label(57px, 17px);
+  }
+
+  &__recipient-name {
+    color: #0d0d0d;
+  }
+
+  &__chat-body {
+    box-sizing: border-box;
+    border-left: $area-border;
+    height: calc(100vh - #{$message-input-hight} - #{$recipient-header-hight});
+    padding: 15px;
+    overflow-y: auto;
+  }
+}

@@ -1,0 +1,14 @@
+@mixin circle($size) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+}
+
+@mixin label($left-indent, $bottom-indent) {
+  left: $left-indent;
+  bottom: $bottom-indent;
+  background: url(../image/online.svg) no-repeat;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+}

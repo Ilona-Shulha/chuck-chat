@@ -1,0 +1,40 @@
+.chat {
+  padding: 20px 20px 20px 15px;
+  border-bottom: $area-border;
+  cursor: pointer;
+  display: grid;
+  position:relative;
+  grid-template-columns: 70px 1fr 100px;
+  grid-template-rows: 25px 40px;
+
+  &:hover {
+    background-color: $gray;
+  }
+
+  &__img {
+    grid-area: 1 / 1 ;
+    @include circle(50px);
+    align-items: center;
+  }
+
+  &__avatar-label {
+    @include label(52px, 35px);
+  }
+
+  &__name {
+    grid-area: 1 / 2;
+  }
+  
+  &__last-message {
+    grid-area: 2 / 2;
+    font-weight: 300;
+    color: $font-color-light;
+    max-height: 45px;
+    overflow: hidden;
+  }
+  
+  &__date {
+    grid-area: 1 / 3;
+    font-weight: 300;
+  }
+}

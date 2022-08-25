@@ -1,0 +1,46 @@
+@import './styles/vars';
+@import './styles/fonts';
+@import './styles/mixins';
+@import './styles/placeholders';
+@import './components/CurrentChat/currentChat.scss';
+@import './components/Header/header.scss';
+@import './components/ChatsList/chatsList.scss';
+@import './components/Chat/Chat.scss';
+@import './components/MessageInput/messageInput.scss';
+@import './components/Message/message.scss';
+
+body, p, h1, h2, h3, ul {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: $font-color-normal;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  background: none;
+  font-size: 100%;
+  vertical-align: baseline;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+}
+
+.backgraund-for-current-chat {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  background-color: $gray;
+  border-left: $area-border;
+}

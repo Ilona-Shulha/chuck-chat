@@ -1,0 +1,40 @@
+.header {
+  background-color: $gray;
+  border-bottom: $area-border;
+  box-sizing: border-box;
+  padding: 18px;
+  width: 100%;
+
+  &__owner-info {
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin-bottom: 33px;
+  }
+
+  &__owner-avatar {
+    @include circle(50px);
+    margin-right: 20px;
+  }
+
+  &__avatar-label {
+    @include label(37px, 0);
+  }
+
+  &__search {
+    background: url('../../image/search_icon.svg') 5% 50% no-repeat #fafafa;
+    @extend %input-border;
+    padding: 13px 13px 13px 40px;
+    display: block;
+    width: 255px;
+    border-radius: 25px;
+
+    &:hover {
+      background-color: $dark-gray;
+    }
+
+    &:focus {
+      background-color: $dark-gray;
+    }
+  }
+}

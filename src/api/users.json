@@ -1,0 +1,23 @@
+[
+  {
+  "firstName": "Cordell",
+  "lastName": "Walker",
+  "avatar": "https://lh3.googleusercontent.com/a-/AFdZucpAnJMnXkpj140QXfqOe3EGd2F9eIBEIgq5aVzP=s96-c",
+  "id": "115836072365396208938",
+  "contacts": {"108444626986479081105": {"text": "Chuck Norris keeps a shotgun in his wallet.", "date": 1661363093730}}
+},
+{
+  "firstName": "James",
+  "lastName": "Trivette",
+  "avatar": "https://lh3.googleusercontent.com/a-/AFdZucrS3xdBzcFvJRfJd1WJvPKNkNDdt7PdutTQwwwp=s96-c",
+  "id": "111779869028818458820",
+  "contacts": {"108444626986479081105": {"text": "Chuck Norris action figures have been banned in the United States and Mexico due to the roundhouse action related to eye loss in children.", "date": 1661363045358}}
+},
+{
+  "firstName": "Chuck",
+  "lastName": "Norris",
+  "avatar": "https://lh3.googleusercontent.com/a-/AFdZucrrSGJ1QFkp_iHUdN3nh__11KQWegRAITZcIsCc=s96-c",
+  "id": "108444626986479081105",
+  "contacts": {"111779869028818458820":{ "text": "Chuck Norris action figures have been banned in the United States and Mexico due to the roundhouse action related to eye loss in children.", "date": 1661363045358}, "115836072365396208938": { "text": "Chuck Norris keeps a shotgun in his wallet.", "date": 1661363093730}}
+}
+]

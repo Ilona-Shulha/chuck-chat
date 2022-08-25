@@ -1,0 +1,47 @@
+.message {
+  list-style-type: none;
+  width: fit-content;
+  display: flex;
+  margin-bottom: 25px;
+  max-width: 60%;
+
+  &__avatar {
+    @include circle(50px);
+    margin-right: 10px;
+  }
+
+  &__text {
+    width: fit-content;
+    padding: 15px;
+    border-radius: 25px;
+    margin-bottom: 15px;
+  }
+
+  &--out {
+    margin-left: auto;
+  }
+
+  &__date {
+    font-weight: 300;
+    font-size: 14px;
+    color: $font-color-light;
+    width: fit-content;
+  }
+}
+
+.text {
+  &--light {
+    background-color: $dark-gray;
+    margin-left: auto;
+    color: #727272;
+  }
+  
+  &--dark {
+    background-color: #3C4252;
+    color: #d0d3da;
+  }
+}
+
+.date--out {
+  margin-left: auto;
+}
