@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/chuck-chat/static/css/main.7018c25e.css",
-    "main.js": "/chuck-chat/static/js/main.c3265df3.js",
+    "main.js": "/chuck-chat/static/js/main.17f50a53.js",
     "static/media/AnyConv.com__Roboto-Regular.woff": "/chuck-chat/static/media/AnyConv.com__Roboto-Regular.457c92bb62734e3030ed.woff",
     "static/media/AnyConv.com__Roboto-Light.woff": "/chuck-chat/static/media/AnyConv.com__Roboto-Light.d2d978b9394983c3338c.woff",
     "static/media/search_icon.svg": "/chuck-chat/static/media/search_icon.c379a0d80258d2eed2a1.svg",
@@ -10,10 +10,10 @@
     "static/media/back.svg": "/chuck-chat/static/media/back.177f857041591d3b8fb3.svg",
     "static/media/online.svg": "/chuck-chat/static/media/online.ccecc17f348eda626870.svg",
     "main.7018c25e.css.map": "/chuck-chat/static/css/main.7018c25e.css.map",
-    "main.c3265df3.js.map": "/chuck-chat/static/js/main.c3265df3.js.map"
+    "main.17f50a53.js.map": "/chuck-chat/static/js/main.17f50a53.js.map"
   },
   "entrypoints": [
     "static/css/main.7018c25e.css",
-    "static/js/main.c3265df3.js"
+    "static/js/main.17f50a53.js"
   ]
 }
