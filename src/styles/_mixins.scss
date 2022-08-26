@@ -4,11 +4,15 @@
   border-radius: 50%;
 }
 
-@mixin label($left-indent, $bottom-indent) {
-  left: $left-indent;
-  bottom: $bottom-indent;
-  background: url(../image/online.svg) no-repeat;
+@mixin label {
+  background: url(../images/online.svg) no-repeat;
   position: absolute;
   width: 18px;
   height: 18px;
 }
+
+@mixin label-position($left-indent, $bottom-indent) {
+  left: $left-indent;
+  bottom: $bottom-indent;
+}
+

@@ -4,7 +4,7 @@ import { UserContext } from '../UserContext';
 import { MessageInput } from '../MessageInput/MessageInput';
 
 
-export const CurrentChat = React.memo(({recipient, changeLastMessage, allMessages, updateMessages}) => {
+export const CurrentChat = React.memo(({recipient, changeLastMessage, allMessages, updateMessages, getDialogVisibility}) => {
   const [messages, setMessages] = useState([]);
   const user = useContext(UserContext);
 
@@ -16,6 +16,11 @@ export const CurrentChat = React.memo(({recipient, changeLastMessage, allMessage
   <div className="current-chat">
     <>
     <div className="current-chat__recipient">
+      <button
+        type="button"
+        className='back-to-dialogs'
+        onClick={() => getDialogVisibility(false)}
+      ></button>
       <img
         src={recipient.avatar}
         alt={`${recipient.firstName} ${recipient.lastName}`}

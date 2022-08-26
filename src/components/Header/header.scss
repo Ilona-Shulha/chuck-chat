@@ -18,16 +18,22 @@
   }
 
   &__avatar-label {
-    @include label(37px, 0);
+    @include label;
+    @include label-position(37px, 0);
   }
 
-  &__search {
-    background: url('../../image/search_icon.svg') 5% 50% no-repeat #fafafa;
+  &__search {box-sizing: border-box;
+    background: url('../../images/search_icon.svg') 5% 50% no-repeat #fafafa;
     @extend %input-border;
     padding: 13px 13px 13px 40px;
     display: block;
     width: 255px;
     border-radius: 25px;
+
+    @media (max-width: 700px) {
+      width: 80vw;
+      padding-left: 70px;
+    }
 
     &:hover {
       background-color: $dark-gray;

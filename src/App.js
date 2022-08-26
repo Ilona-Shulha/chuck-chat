@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useMediaQuery } from 'react-responsive'
 import jwt_decode from "jwt-decode";
 import { UserContext } from './components/UserContext';
 import { CurrentChat } from './components/CurrentChat/CurrentChat';
@@ -7,12 +8,19 @@ import './App.scss';
 import messages from './api/messages.json';
 import users from './api/users.json';
 
-
 function App() {
   const [activeUser, setActiveUser] = useState({});
   const [activeRecipient, setActiveRecipient] = useState({});
   const [lastMessages, setLastMessages] = useState({});
   const [allMessages, setAllMessages] = useState([]);
+  const [dialogsActive, setDialogsActive] = useState(false);
+
+
+  const isMobile = useMediaQuery({ maxWidth: 700 });
+
+  const getDialogVisibility = (visibility) => {
+    setDialogsActive(visibility);
+  }
 
   const updateMessages = () => {
     setAllMessages(JSON.parse(localStorage.getItem('messages')))
@@ -49,10 +57,6 @@ function App() {
   }
 
   useEffect(() => {
-    updateMessages();
-  }, [activeUser])
-
-  useEffect(() => {
     /* global google */
     google.accounts.id.initialize({
       client_id: "213851041335-t5vuqvgg4b30an96prtb9cpsphh9j7tm.apps.googleusercontent.com",
@@ -63,14 +67,17 @@ function App() {
       document.getElementById("signInDiv"),
       { theme: "outline", size: "large"}
     )
-    localStorage.setItem('messages', JSON.stringify(messages))
+    localStorage.setItem('messages', JSON.stringify(messages));
       }, []);
 
-  return (
+      useEffect(() => {
+        updateMessages();
+      }, [activeUser])
+
+      return (
     <UserContext.Provider value={activeUser}>
     <div className="App">
       <div className="log-in-out">
-        
         <div id="signInDiv"></div>
         <img
           src="./favicon.png"
@@ -79,27 +86,32 @@ function App() {
           hidden={activeUser.id}
         />
       </div>
-      
+
       {activeUser.id && (
         <>
+        {(!isMobile || !dialogsActive) && (
         <div className="sidebar">
           <ChatsList
             changeRecipient={changeRecipient}
             lastMessages={lastMessages}
             allMessages={allMessages}
+            getDialogVisibility={getDialogVisibility}
           />
-        </div>
-        {(activeRecipient.id) ?
-          (<CurrentChat
-            recipient={activeRecipient}
-            changeLastMessage={changeLastMessage}
-            allMessages={allMessages}
-            updateMessages={updateMessages}
-          />
-          ) : (
-          <div className="backgraund-for-current-chat">
-          </div>
-        )}
+        </div>)}
+        {(!isMobile || dialogsActive) && 
+          ((activeRecipient.id) ?
+            (<CurrentChat
+              recipient={activeRecipient}
+              changeLastMessage={changeLastMessage}
+              allMessages={allMessages}
+              updateMessages={updateMessages}
+              getDialogVisibility={getDialogVisibility}
+            />
+            ) : (
+            <div className="backgraund-for-current-chat">
+            </div>
+          ))
+        }
         </>
       )}
     </div>

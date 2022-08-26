@@ -16,10 +16,19 @@
   &__recipient-photo {
     margin-right: 20px;
     @include circle(50px);
+
+    @media (max-width: 700px) {
+      margin-left: 15px;
+    }
   }
 
   &__avatar-label {
-    @include label(57px, 17px);
+    @include label;
+    @include label-position(57px, 17px);
+
+    @media (max-width: 700px) {
+      @include label-position(96px, 17px)
+    }
   }
 
   &__recipient-name {
@@ -32,5 +41,16 @@
     height: calc(100vh - #{$message-input-hight} - #{$recipient-header-hight});
     padding: 15px;
     overflow-y: auto;
+  }
+}
+
+.back-to-dialogs {
+  display: none;
+  width: 24px;
+  height: 19px;
+  background: no-repeat url("../../images/back.svg");
+
+  @media (max-width: 700px) {
+    display: block;
   }
 }

@@ -18,7 +18,8 @@
   }
 
   &__avatar-label {
-    @include label(52px, 35px);
+    @include label;
+    @include label-position(52px, 35px);
   }
 
   &__name {

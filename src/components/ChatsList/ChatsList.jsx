@@ -4,7 +4,7 @@ import { UserContext } from '../UserContext';
 import { Header } from '../Header/Header'
 import { Chat } from '../Chat/Chat'
 
-export const ChatsList = React.memo(({changeRecipient, lastMessages, allMessages}) => {
+export const ChatsList = React.memo(({changeRecipient, lastMessages, allMessages, getDialogVisibility}) => {
   const [companions, setCompanions] = useState([]);
   const [searchPattern, setSearchPattern] = useState('');
   const user = useContext(UserContext);
@@ -31,6 +31,7 @@ export const ChatsList = React.memo(({changeRecipient, lastMessages, allMessages
               companion={companion}
               changeRecipient={changeRecipient}
               visibleMessage={lastMessages}
+              getDialogVisibility={getDialogVisibility}
             />
           </React.Fragment>
       ))}
@@ -42,6 +43,7 @@ export const ChatsList = React.memo(({changeRecipient, lastMessages, allMessages
             companion={companions.find(el => el.id === message.authorId || el.id === message.recipientId)}
             changeRecipient={changeRecipient}
             visibleMessage={{text: message.text, date: message.createdAt}}
+            getDialogVisibility={getDialogVisibility}
           />
         </React.Fragment>
         ))
@@ -57,6 +59,7 @@ export const ChatsList = React.memo(({changeRecipient, lastMessages, allMessages
                 companion={companion}
                 changeRecipient={changeRecipient}
                 visibleMessage={lastMessages}
+                getDialogVisibility={getDialogVisibility}
               />
             </React.Fragment>
           ))}
