@@ -50,9 +50,7 @@ function App() {
         users = [...users, newUser]
       }
         setActiveUser(users.find(el => el.id === sub));
-        setLastMessages(users.find(el => el.id === sub).contacts);
-        updateMessages();
-
+        setLastMessages(users.find(el => el.id === sub).contacts)
         document.getElementById("signInDiv").hidden = true;
   }
 
@@ -61,14 +59,15 @@ function App() {
     google.accounts.id.initialize({
       client_id: "213851041335-t5vuqvgg4b30an96prtb9cpsphh9j7tm.apps.googleusercontent.com",
       callback: handleCallbackResponse,
-    }, [])
+    })
 
     google.accounts.id.renderButton(
       document.getElementById("signInDiv"),
       { theme: "outline", size: "large"}
-    )
-    localStorage.setItem('messages', JSON.stringify(messages));
-      }, []);
+    );
+
+    localStorage.getItem('messages') ? updateMessages() : localStorage.setItem('messages', JSON.stringify(messages));
+  }, []);
 
       useEffect(() => {
         updateMessages();
